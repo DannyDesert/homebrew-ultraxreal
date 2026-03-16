@@ -1,0 +1,17 @@
+cask "ultraxreal" do
+  version "1.0.0"
+  sha256 "af5e4b21c4141f519050d8f37aa552d0e020a8f80b2c7ec3734b25d2f1a2f641"
+
+  url "https://github.com/DannyDesert/XReal-Ultrawide/releases/download/v#{version}/UltraXReal-v#{version}.dmg"
+  name "UltraXReal"
+  desc "Virtual ultrawide display for XReal Air AR glasses"
+  homepage "https://github.com/DannyDesert/XReal-Ultrawide"
+
+  depends_on macos: ">= :ventura"
+
+  app "UltraXReal.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.ultraxreal.app.plist",
+  ]
+end
