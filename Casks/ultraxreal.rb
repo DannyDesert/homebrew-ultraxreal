@@ -11,6 +11,11 @@ cask "ultraxreal" do
 
   app "UltraXReal.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/UltraXReal.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/com.ultraxreal.app.plist",
   ]
