@@ -16,6 +16,17 @@ cask "ultraxreal" do
                    args: ["-cr", "#{appdir}/UltraXReal.app"]
   end
 
+  caveats <<~EOS
+    UltraXReal uses a private Apple API and is not notarized.
+
+    If macOS blocks it on first launch:
+      1. Open System Settings > Privacy & Security
+      2. Scroll down and click "Open Anyway" next to UltraXReal
+      3. Or run: xattr -cr /Applications/UltraXReal.app
+
+    After allowing it once, it will launch normally every time.
+  EOS
+
   zap trash: [
     "~/Library/Preferences/com.ultraxreal.app.plist",
   ]
