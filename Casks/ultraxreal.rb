@@ -1,6 +1,6 @@
 cask "ultraxreal" do
   version "1.0.0"
-  sha256 "af5e4b21c4141f519050d8f37aa552d0e020a8f80b2c7ec3734b25d2f1a2f641"
+  sha256 "145de8f20d7da5c10b9970841114daaa6a8e0dc795779330c58a304eef484b32"
 
   url "https://github.com/DannyDesert/XReal-Ultrawide/releases/download/v#{version}/UltraXReal-v#{version}.dmg"
   name "UltraXReal"
