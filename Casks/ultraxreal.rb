@@ -1,10 +1,10 @@
 cask "ultraxreal" do
-  version "1.0.0"
-  sha256 "145de8f20d7da5c10b9970841114daaa6a8e0dc795779330c58a304eef484b32"
+  version "2.0.0"
+  sha256 "a90f2c56c34355548caa619813e60cb1d8efa84a5a9d450dad560f7eea726555"
 
   url "https://github.com/DannyDesert/XReal-Ultrawide/releases/download/v#{version}/UltraXReal-v#{version}.dmg"
   name "UltraXReal"
-  desc "Virtual ultrawide display for XReal Air AR glasses"
+  desc "Spatial floating display and ultrawide HUD for XReal Air AR glasses"
   homepage "https://github.com/DannyDesert/XReal-Ultrawide"
 
   depends_on macos: ">= :ventura"
@@ -25,6 +25,9 @@ cask "ultraxreal" do
       3. Or run: xattr -cr /Applications/UltraXReal.app
 
     After allowing it once, it will launch normally every time.
+
+    Spatial mode requires screen recording permission (macOS will prompt).
+    Connect XReal Air via USB-C before enabling spatial mode.
   EOS
 
   zap trash: [
